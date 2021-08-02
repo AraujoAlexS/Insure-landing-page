@@ -9,14 +9,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Insure landing page</title>
-
+  <link rel="stylesheet" href="./dist/css/index.css">
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <img src="" alt="" class="logo">
-      <div class="collapse">
+  <div class="container">
+    <header class="header">
+      <img src="./images/logo.svg" alt="" class="logo">
+      <input type="checkbox" class="collapse" id="navbar-collapse">
+      <nav class="navbar">
+        <img src="./images/bg-pattern-mobile-nav.svg" alt="" class="nav-img">
         <ul class="navbar-list">
           <li class="nav-item">
             <a href="" class="nav-link">How we work</a>
@@ -31,40 +33,70 @@
             <a href="" class="nav-link">View plans</a>
           </li>
         </ul>
+      </nav>
+      <label class="label" for='navbar-collapse'>
+        <img src="./images/icon-hamburger.svg" alt="" srcset="" class='label-hamburger'>
+        <img src="./images/icon-close.svg" alt="" class="label-x">
+      </label>
+    </header>
+    <main class='main'>
+      <div class="banner">
+        <img src="./images/bg-pattern-intro-right-desktop.svg" alt="" class="bg-right-desktop">
+        <img src="./images/bg-pattern-intro-left-desktop.svg" alt="" class="bg-left-desktop">
+        <div class="banner-text">
+          <img src="./images/bg-pattern-intro-right-mobile.svg" alt="" class="bg-right-mobile">
+          <img src="./images/bg-pattern-intro-left-mobile.svg" alt="" class="bg-left-mobile">
+          <h1 class="title">
+            Humanizing your insurance.
+          </h1>
+          <p class="paragraph">
+            Get your life insurance coverage easier and faster. We blend our expertise
+            and technology to help you find the plan that’s right for you. Ensure you
+            and your loved ones are protected.
+          </p>
+          <button class="btn">
+            View plans
+          </button>
+        </div>
+        <div class="banner-img">
+          <img src="./images/image-intro-mobile.jpg" alt="" class="banner-img-mobile">
+          <img src="./images/image-intro-desktop.jpg" alt="" class="banner-img-desktop">
+        </div>
       </div>
-    </nav>
-  </header>
-  <main class='main'>
+      <section class="content-description">
+        <h2 class="content-description-title">We’re different</h2>
+        <article class="card">
+          <div class="card-img">
+            <img src="./images/icon-snappy-process.svg" alt="">
+          </div>
+          <h3 class="card-title">Snappy Process</h3>
+          <p class="card-text">Our application process can be completed in minutes, not hours. Don’t get
+            stuck filling in tedious forms.</p>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="./images/icon-affordable-prices.svg" alt="">
+          </div>
+          <h3 class="card-title">Affordable Prices</h3>
+          <p class="card-text">We don’t want you worrying about high monthly costs. Our prices may be low,
+            but we still offer the best coverage possible.</p>
+        </article>
+        <article class="card">
+          <div class="card-img">
+            <img src="./images/icon-people-first.svg" alt="">
+          </div>
+          <h3 class="card-title">People First</h3>
+          <p class="card-text">Our plans aren’t full of conditions and clauses to prevent payouts. We make
+            sure you’re covered when you need it.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
 
-  </main>
-  <footer class="footer">
+    </footer>
+  </div>
 
-  </footer>
-
-  Humanizing your insurance.
-
-  Get your life insurance coverage easier and faster. We blend our expertise
-  and technology to help you find the plan that’s right for you. Ensure you
-  and your loved ones are protected.
-
-  View plans
-
-  We’re different
-
-  Snappy Process
-
-  Our application process can be completed in minutes, not hours. Don’t get
-  stuck filling in tedious forms.
-
-  Affordable Prices
-
-  We don’t want you worrying about high monthly costs. Our prices may be low,
-  but we still offer the best coverage possible.
-
-  People First
-
-  Our plans aren’t full of conditions and clauses to prevent payouts. We make
-  sure you’re covered when you need it.
+  <!--
 
   Find out more about how we work
 
@@ -95,7 +127,7 @@
   Careers
   Press
   Licenses
-
+-->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

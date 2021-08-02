@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+//Primary
+$Dark-Violet: hsl(256, 26%, 20%);
+$Grayish-Blue: hsl(216, 30%, 68%);
+//Neutral
+$Very-Dark-Violet: hsl(270, 9%, 17%);
+$Dark-Grayish-Violet: hsl(273, 4%, 51%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+//Fonts
+$headings: "DM Serif Display";
+$body: "Karla";
+
+$padding: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  max-width: 400px;
+  min-width: 350px;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+
+  .collapse {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+  }
+  .logo,
+  .label {
+    margin: 20px 30px;
+  }
+
+  .label-x {
+    display: none;
+  }
+
+  .collapse:checked ~ .navbar {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  .collapse:checked ~ .label {
+    .label-hamburger {
+      display: none;
+    }
+    .label-x {
+      display: block;
+    }
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: $Very-Dark-Violet;
+    height: 70vh;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    transform-origin: top;
+    transform: scaleY(0);
+
+    .nav-img {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      bottom: 0%;
+    }
+
+    .navbar-list {
+      margin: 30px;
+      list-style: none;
+      text-align: center;
+
+      .nav-item {
+        color: #fff;
+        height: 40px;
+        font-size: 20px;
+        font-family: $body;
+        line-height: 40px;
+        border: 2px solid $Very-Dark-Violet;
+
+        &:hover {
+          border: 2px solid #fff;
+        }
+        .nav-link {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .banner {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    background: $Dark-Violet;
+    color: #fff;
+
+    .bg-right-desktop,
+    .bg-left-desktop {
+      display: none;
+    }
+
+    .bg-right-mobile,
+    .bg-left-mobile {
+      position: absolute;
+      width: 40%;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .banner-text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 30px;
+      text-align: center;
+
+      .bg-left-mobile {
+        left: 0;
+        top: 0px;
+      }
+
+      .bg-right-mobile {
+        right: 0;
+        top: 50%;
+      }
+
+      .title {
+        margin-bottom: 20px;
+        font-size: 42px;
+        font-weight: 400;
+        font-family: $headings;
+      }
+      .paragraph {
+        margin-bottom: 20px;
+        font-family: $body;
+        line-height: 22px;
+      }
+
+      .btn {
+        font-family: $body;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 18;
+        font-weight: 700;
+        width: 50%;
+        height: 50px;
+        background: $Dark-Violet;
+        border: 2px solid #fff;
+      }
+    }
+  }
+
+  .content-description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 30px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 2px;
+      background: $Dark-Grayish-Violet;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .content-description-title {
+    font-family: $headings;
+    font-size: 50px;
+    font-weight: 400;
+    color: $Very-Dark-Violet;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-title {
+      margin: 40px 0 25px;
+      font-size: 25px;
+      font-family: $headings;
+      color: $Very-Dark-Violet;
+    }
+
+    &-text {
+      color: $Dark-Grayish-Violet;
+      line-height: 27px;
+      font-family: $body;
+      text-align: center;
+    }
+  }
+}
