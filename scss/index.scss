@@ -235,4 +235,42 @@ body {
       text-align: center;
     }
   }
+
+  .how-we-work {
+    position: relative;
+    margin: 20px 0 60px;
+    background: $Dark-Violet;
+    padding: $padding 40px 80px;
+    text-align: center;
+
+    .img-desktop {
+      display: none;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &-title {
+      font-family: $headings;
+      font-size: 40px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      color: #fff;
+      z-index: 2;
+    }
+
+    &-link {
+      padding: 15px 30px;
+      font-family: $body;
+      border: 2px solid #fff;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 5px;
+    }
+  }
 }
