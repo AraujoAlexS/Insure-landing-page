@@ -307,6 +307,12 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 5px;
+  z-index: 999;
+}
+
+.main .how-we-work-link:hover {
+  background: #fff;
+  color: #2b272f;
 }
 
 .footer {
@@ -364,6 +370,10 @@ body {
 .footer-container-top .social i {
   font-size: 26px;
   color: #837d87;
+}
+
+.footer-container-top .social i:hover {
+  color: #2b272f;
 }
 
 .footer-container-bot {
@@ -585,6 +595,90 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px 10vw 60px;
+    overflow: hidden;
+    padding: 30px 80px;
+  }
+  .main .how-we-work .img-desktop {
+    display: block;
+  }
+  .main .how-we-work .img-mobile {
+    display: none;
+  }
+  .main .how-we-work-title {
+    margin: 0;
+    width: 50%;
+    font-size: 43px;
+    text-align: left;
+  }
+  .main .how-we-work-link {
+    padding: 0;
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .footer {
+    padding: 0 10vw;
+    background: #fafafa;
+  }
+  .footer .img-desktop {
+    display: block;
+  }
+  .footer .img-mobile {
+    display: none;
+  }
+  .footer-img {
+    width: auto;
+  }
+  .footer-container {
+    padding: 0;
+    width: 100%;
+    padding-top: 30px;
+  }
+  .footer-container-top {
+    margin: 0px 0 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-container-top .logo {
+    width: auto;
+  }
+  .footer-container-top .social {
+    width: auto;
+  }
+  .footer-container-top .social i {
+    margin-left: 10px;
+  }
+  .footer-container-bot {
+    padding: 40px 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer-container-bot:after {
+    width: 100%;
+  }
+  .footer-container-bot .footer-info {
+    width: 25%;
+  }
+  .footer-container-bot .footer-info h4,
+  .footer-container-bot .footer-info ul {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=index.css.map */

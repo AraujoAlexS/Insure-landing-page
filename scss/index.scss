@@ -276,6 +276,12 @@ body {
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 5px;
+      z-index: 999;
+
+      &:hover {
+        background: #fff;
+        color: $Very-Dark-Violet;
+      }
     }
   }
 }
@@ -315,6 +321,10 @@ body {
         i {
           font-size: 26px;
           color: $Dark-Grayish-Violet;
+
+          &:hover {
+            color: $Very-Dark-Violet;
+          }
         }
       }
     }
@@ -531,6 +541,86 @@ body {
     }
     .how-we-work {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px $margingX 60px;
+      overflow: hidden;
+      padding: 30px 80px;
+
+      .img-desktop {
+        display: block;
+      }
+
+      .img-mobile {
+        display: none;
+      }
+
+      &-title {
+        margin: 0;
+        width: 50%;
+        font-size: 43px;
+        text-align: left;
+      }
+
+      &-link {
+        padding: 0;
+        width: 190px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+  .footer {
+    padding: 0 $margingX;
+    background: $Very-Light-Gray;
+    .img-desktop {
+      display: block;
+    }
+    .img-mobile {
+      display: none;
+    }
+    &-img {
+      width: auto;
+    }
+
+    &-container {
+      padding: 0;
+      width: 100%;
+      padding-top: 30px;
+      &-top {
+        margin: 0px 0 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          width: auto;
+        }
+
+        .social {
+          width: auto;
+
+          i {
+            margin-left: 10px;
+          }
+        }
+      }
+      &-bot {
+        padding: 40px 0;
+        flex-direction: row;
+        &:after {
+          width: 100%;
+        }
+
+        .footer-info {
+          width: 25%;
+
+          h4,
+          ul {
+            text-align: left;
+          }
+        }
+      }
     }
   }
 }
